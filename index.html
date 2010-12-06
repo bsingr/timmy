@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Timmy</title>
+        <meta http-equiv="content-language" content="en">
+        <meta charset="utf-8">
+    </head>
+    <body class="raphael">
+        <script src="raphael-1.5.2.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="timmy-0.0.1.js" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript" charset="utf-8">
+          (function(){
+            var timeline = [];
+            for (var i = 0; i < 36; i++) {
+              timeline[i] = Math.random() * i + 3;
+              while (timeline[i] > 24) { timeline[i] -= 5; }
+            }
+            timeline = timeline.sort();
+            
+            timmy(timeline);
+          })();
+        </script>
+    </body>
+</html>
